@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  pipelineTriggers([pollSCM('H/5 * * * *')])
+  properties([pipelineTriggers([pollSCM('H/5 * * * *')])])
   stages {
     stage(checkout) {
       steps {
