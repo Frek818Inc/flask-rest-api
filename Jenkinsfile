@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  triggers{ cron('H/15 * * * *') }
+  pipelineTriggers([pollSCM('H/5 * * * *')])
   stages {
     stage(checkout) {
       steps {
